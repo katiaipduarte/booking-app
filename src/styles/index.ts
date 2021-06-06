@@ -20,5 +20,9 @@ export const GlobalStyle = createGlobalStyle`
         .MuiFilledInput-adornedEnd {
             pointer-events: none;
         }
+
+        .MuiIconButton-root:nth-child(2) {
+            display: none;
+        }
     }
 `;
