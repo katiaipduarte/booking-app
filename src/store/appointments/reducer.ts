@@ -18,8 +18,17 @@ const appointmentReducer: Reducer<AppointmentsStore> = (
         appointments: action.payload,
       };
     case AppointmentsType.UPDATE:
+      //in the future needs to filter by mentor and then update the calendar
+      const updated = state.appointments.map((i) => {
+        return {
+          mentor: i.mentor,
+          calendar: [...i.calendar, action.payload],
+        };
+      });
+
       return {
         ...state,
+        appointments: updated,
       };
     case AppointmentsType.NEW_DATE:
       return {

@@ -31,7 +31,9 @@ To use this app, first clone from GitHub via 'git clone https://github.com/katia
 
 ## Future Work
 
-[ ] Future work example message <br>
+[ ] Add unit testing <br>
+[ ] Add option to change selected calendar<br>
+[ ] Add calendar/mentor owner view<br>
 
 ## Contributing
 

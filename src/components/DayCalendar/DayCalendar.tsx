@@ -8,20 +8,16 @@ import {
   AppointmentTooltip,
   ConfirmationDialog,
 } from '@devexpress/dx-react-scheduler-material-ui';
-import {
-  AppointmentModel,
-  ChangeSet,
-  EditingState,
-  IntegratedEditing,
-  ViewState,
-} from '@devexpress/dx-react-scheduler';
+import { ChangeSet, EditingState, IntegratedEditing, ViewState } from '@devexpress/dx-react-scheduler';
 import { CalendarAppointment } from '../../interfaces/calendar-appointment';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { GlobalState } from '../../store/store';
+import { updateAppointmentsList } from '../../store/appointments/action';
 
 const DayCalendar = () => {
   const state = useSelector((state: GlobalState) => state.appointmentsState);
   const [appointments, setAppointments] = useState<CalendarAppointment[]>([]);
+  const dispatch = useDispatch();
 
   useEffect(() => {
     if (state.appointments.length > 0) {
@@ -31,6 +27,7 @@ const DayCalendar = () => {
 
   const updateAppointments = (e: ChangeSet) => {
     setAppointments([...appointments, e.added as CalendarAppointment]);
+    dispatch(updateAppointmentsList(e.added as CalendarAppointment));
   };
 
   return (
