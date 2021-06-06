@@ -1,10 +1,16 @@
 import { combineReducers, applyMiddleware, createStore } from '@reduxjs/toolkit';
 import thunk from 'redux-thunk';
+import appointmentReducer from './appointments/reducer';
+import { AppointmentsStore } from './appointments/type';
 
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
-export interface GlobalState {}
+export interface GlobalState {
+  appointmentsState: AppointmentsStore;
+}
 
-const combinedReducer = combineReducers<GlobalState>({});
+const combinedReducer = combineReducers<GlobalState>({
+  appointmentsState: appointmentReducer,
+});
 
 const bindMiddleware = (middleware: any) => {
   if (process.env.NODE_ENV !== 'production') {

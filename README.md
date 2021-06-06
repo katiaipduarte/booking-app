@@ -12,7 +12,6 @@ The app was created with create-react-app, redux, typescript and styled-componen
 - [Contributing](#contributing)
 - [License](#license)
 - [Folder Structure](#folder-structure)
-- [Routes](#routes)
 - [Available Scripts](#available-scripts)
   - [yarn start or npm start](#yarn-start-or-npm-start)
   - [yarn test or npm test](#yarn-test-or-npm-test)
@@ -87,12 +86,6 @@ You may create subdirectories inside `src`. For faster rebuilds, only files insi
 You need to **put any TypeScript and styles files inside `src`**, otherwise Webpack won’t see them.
 
 Only files inside `public` can be used from `public/index.html`.<br>
-
-## Routes
-
-```
-/
-```
 
 ## Available Scripts
 

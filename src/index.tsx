@@ -8,13 +8,22 @@ import * as serviceWorker from './serviceWorker';
 import './index.css';
 import App from './App';
 import registerIcons from './registerFaIcons';
+import CssBaseline from '@material-ui/core/CssBaseline';
+import { ThemeProvider, createMuiTheme } from '@material-ui/core';
+
+const theme = createMuiTheme({
+  palette: {
+    type: 'dark',
+  },
+});
 
 ReactDOM.render(
-  <React.StrictMode>
-    <Provider store={store}>
+  <Provider store={store}>
+    <ThemeProvider theme={theme}>
+      <CssBaseline />
       <App />
-    </Provider>
-  </React.StrictMode>,
+    </ThemeProvider>
+  </Provider>,
   document.getElementById('root'),
 );
 
