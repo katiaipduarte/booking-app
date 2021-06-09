@@ -1,8 +1,17 @@
-# Getting Started with Create React App
+# Getting Started with Booking App
 
-Demo at:
+Welcome to my Booking App, where you can see select a day and schedule a 1 hour slot
 
-The app was created with create-react-app, redux, typescript and styled-components for styling. See the [full create-react-app guide](https://github.com/facebook/create-react-app), [redux](https://redux.js.org/) and [redux toolkit](https://redux-toolkit.js.org/). Thank you for using my boilerplate.
+Demo at: https://katiaipduarte.github.io/booking-app/
+
+The app was created with create-react-app, redux and typescript. See the [full create-react-app guide](https://github.com/facebook/create-react-app), [redux](https://redux.js.org/) and [redux toolkit](https://redux-toolkit.js.org/). 
+
+
+To create the calendars visible, two libraries were used. The month calendar uses [react-calendar](https://www.npmjs.com/package/react-calendar) and the day calendar [React Scheduler](https://devexpress.github.io/devextreme-reactive/react/scheduler/docs/guides/getting-started/). This decision was taken, so the development time would be cut down.
+
+For styling it was used styled-components and [material-ui](https://material-ui.com/). Styled components here are only used as small way to organize the style and in the future, in case of developing more the app be easier to do. Material UI framework, was once more used as a tool to help cut down the development time, since it already gives a lot of components out of the box.
+
+Thank you for using my app.
 
 ## Table of Contents
 
@@ -25,15 +34,23 @@ The app was created with create-react-app, redux, typescript and styled-componen
 
 ## Installation
 
-To use this app, first clone from GitHub via 'git clone https://github.com/katiaipduarte/cra-boilerplate' at your terminal, `cd` to the new directory, then run `npm install`. Before running this project, you will need to create a `.env.local` file, with the same env as the ones in the `.env.example`. At last, run `npm run start` to launch your http server.
+To use this app, first clone from GitHub via 'git clone https://github.com/katiaipduarte/booking-app.git' at your terminal, `cd` to the new directory, then run `npm install`. Before running this project, you will need to create a `.env.local` file, with the same env as the ones in the `.env.example`. At last, run `npm run start` to launch your http server.
 
 ### API Keys
+
+This project is connect to an external private API. Before starting the project either create your own (should follow the same API pattern described in the `appointments.ts` interface file) or you could start the project without it.
 
 ## Future Work
 
 [ ] Add unit testing <br>
 [ ] Add option to change selected calendar<br>
 [ ] Add calendar/mentor owner view<br>
+[ ] Add accessibility rules<br>
+[ ] Block user from scheduling in the past<br>
+[ ] Add database connection to save (instead of only been saved temporarily in redux store)<br>
+[ ] Add light mode (instead of only dark)<br>
+[ ] Add possibility to update or delete the booking<br>
+
 
 ## Contributing
 
@@ -59,13 +76,9 @@ my-app/
     assets/
     components/
     interfaces/
-    lib/
-    pages/
     store/
     styles/
       index.ts
-      reset-css.ts
-      typography.ts
     utils/
     App.tsx
     index.css
@@ -78,8 +91,6 @@ For the project to build, **these files must exist with exact filenames**:
 - `src/index.tsx` is the TypeScript entry point.
 - `src/components` is the folder that houses all the components used.
 - `src/interfaces` is the folder with all the interfaces/type files used in the components.
-- `src/lib` is the folder for all the services/providers.
-- `src/pages` is the folder that contains the files with the initial logic used for each route.
 - `src/store` is the folder with the redux logic.
 - `src/style` is the folder with typography, reset and any other style rules shared by all React components.
 - `src/utils` is the folder with helper functions.
