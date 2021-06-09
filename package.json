@@ -1,7 +1,8 @@
 {
-  "name": "cra-boilerplate",
-  "version": "0.2.0",
+  "name": "booking-app",
+  "version": "0.1.0",
   "private": true,
+  "homepage": "https://katiaipduarte.github.io/booking-app",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
